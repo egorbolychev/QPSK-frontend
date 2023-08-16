@@ -26,7 +26,7 @@ const ChooseFormat = () => {
   const protocol = useSelector(state => state.step.protocol)
 
   const refreshParams = () => {
-    let url = API_SERVER + "/api/protocol_params?protocol=" + protocol 
+    let url = API_SERVER + "/api/protocol_params/?protocol=" + protocol 
     axios.get(url
     ).then(data => {
         dispatch(setParamSet({params: data.data}))

@@ -26,7 +26,7 @@ const SetParamsChart = () => {
     const refreshParams = () => {
         let filter = "?protocol=" + protocol 
         if (selectedParam?.val) filter += "&&apart_from=" + selectedParam.val
-        let url = API_SERVER + "/api/protocol_params" + filter 
+        let url = API_SERVER + "/api/protocol_params/" + filter 
         axios.get(url
         ).then(data => {
             dispatch(setParamSet({params: data.data}))

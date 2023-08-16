@@ -31,7 +31,7 @@ const ChooseProtocol = () => {
   const [protocols, setProtocols] = useState([])
 
   const refreshProtocols = () => {
-    let url = API_SERVER + '/api/protocol'
+    let url = API_SERVER + '/api/protocol/'
     axios.get(url
       ).then(data => {
         setProtocols(data.data)
