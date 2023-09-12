@@ -30,7 +30,7 @@ const Calculation = () => {
                             <Icon type={hover === index ? "question-hover": "question-white"} width="20" heigth="20" />
                             {hover === index && <Description param={param} className="calc-param-description" />}
                             </div>
-                            <p>{param.name} = {param.val}</p>
+                            <p>{param.name} = {param.value}</p>
                         </div>
                     )}
                 </div>
